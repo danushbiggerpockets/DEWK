@@ -1,0 +1,6 @@
+{
+  "name": "DEWK Financial Plan Template",
+  "description": "Free Financial Plan Template and Projection Model for Dually Employed With Kids (DEWK) caught in the Middle Class Trap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
