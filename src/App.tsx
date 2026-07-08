@@ -33,20 +33,6 @@ export default function App() {
   return (
     <div id="dewk-toolkit" className="min-h-screen bg-[#fbfaf6] text-[#1a1a1b] font-sans antialiased selection:bg-stone-200 selection:text-stone-900 pb-28">
       
-      {/* Top Header Label */}
-      <header className="border-b border-stone-200/50 py-3.5 px-4 bg-[#fbfaf6]">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-semibold uppercase tracking-widest text-stone-500">
-          <div className="flex items-center gap-1.5 justify-center">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-700 animate-pulse" />
-            <span>BiggerPockets Money Community Toolkit</span>
-          </div>
-          <div className="flex items-center gap-3 justify-center">
-            <span>Author: Scott Trench</span>
-            <span className="text-stone-300">|</span>
-            <span>Free Educational Asset</span>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Content Section */}
       <section className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 text-center">
@@ -67,28 +53,8 @@ export default function App() {
 
         {/* Second Disclaimer Paragraph */}
         <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mb-10 italic">
-          This is not YOUR financial plan – it is for illustrative and educational purposes only. We hope you like it. The plan is free. No email required. Just click the button below to make a copy in Google Drive, and/or download a .docx (MS Word) version to your device.
+          This is not YOUR financial plan – it is for illustrative and educational purposes only. We hope you like it. The plan is free. No email required.
         </p>
-
-        {/* Action Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-3.5 mb-10">
-          <button
-            onClick={handleCopyLink}
-            className="flex items-center gap-2 bg-stone-900 hover:bg-stone-800 active:scale-[0.98] text-white font-medium text-xs sm:text-sm py-3 px-6 rounded-lg shadow-sm transition-all duration-150 cursor-pointer"
-          >
-            <Share2 className="w-4 h-4 text-emerald-400" />
-            {copiedLink ? "Link Copied!" : "Make Copy in Google Drive"}
-          </button>
-          
-          <button
-            onClick={handleDownload}
-            disabled={downloading}
-            className="flex items-center gap-2 bg-white hover:bg-stone-50 active:scale-[0.98] text-stone-800 font-medium text-xs sm:text-sm py-3 px-6 rounded-lg border border-stone-300 shadow-xs transition-all duration-150 cursor-pointer"
-          >
-            <Download className={`w-4 h-4 text-stone-600 ${downloading ? "animate-bounce" : ""}`} />
-            {downloading ? "Downloading..." : "Download .docx (MS Word)"}
-          </button>
-        </div>
 
         {/* Global Success / Copy Toast Banner */}
         <AnimatePresence>
