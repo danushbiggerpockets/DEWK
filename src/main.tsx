@@ -3,8 +3,12 @@ import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+const targetElement = document.getElementById('root') || document.getElementById('dewk-toolkit');
+if (targetElement) {
+  createRoot(targetElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  );
+}
+

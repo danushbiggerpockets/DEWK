@@ -11,6 +11,48 @@ export default function App() {
   const [copiedLink, setCopiedLink] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
+  React.useEffect(() => {
+    const sendHeight = () => {
+      const el = document.getElementById("dewk-toolkit");
+      if (el) {
+        // Measure multiple height metrics to guarantee we get the absolute full height,
+        // and add a 60px extra safety buffer to prevent clipping or scrollbars.
+        const height = Math.max(
+          el.scrollHeight,
+          el.offsetHeight,
+          document.documentElement.scrollHeight,
+          document.documentElement.offsetHeight
+        ) + 60;
+        window.parent.postMessage({ type: "resize-iframe", height }, "*");
+      }
+    };
+
+    // Send height immediately
+    sendHeight();
+
+    // Send height when completely loaded
+    window.addEventListener("load", sendHeight);
+
+    // Watch for size changes of the container
+    const resizeObserver = new ResizeObserver(() => {
+      sendHeight();
+    });
+
+    const target = document.getElementById("dewk-toolkit");
+    if (target) {
+      resizeObserver.observe(target);
+    }
+
+    // Periodic backup interval to ensure correct height
+    const intervalId = setInterval(sendHeight, 1000);
+
+    return () => {
+      window.removeEventListener("load", sendHeight);
+      resizeObserver.disconnect();
+      clearInterval(intervalId);
+    };
+  }, []);
+
   const handleDownload = () => {
     setDownloading(true);
     setTimeout(() => {
@@ -31,7 +73,7 @@ export default function App() {
   };
 
   return (
-    <div id="dewk-toolkit" className="min-h-screen bg-[#fbfaf6] text-[#1a1a1b] font-sans antialiased selection:bg-stone-200 selection:text-stone-900 pb-28">
+    <div id="dewk-toolkit" className="min-h-screen bg-white text-[#1a1a1b] font-sans antialiased selection:bg-stone-200 selection:text-stone-900 pb-36">
       
 
       {/* Hero Content Section */}
