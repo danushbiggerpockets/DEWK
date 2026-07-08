@@ -72,236 +72,32 @@ export default function App() {
         </AnimatePresence>
       </section>
 
-      {/* NATIVE CARDS SECTION */}
-      <section className="px-6 py-12 bg-stone-100/30 border-y border-stone-200/40">
+      {/* EMBED CARDS SECTION */}
+      <section className="px-6 py-10 bg-stone-100/30 border-y border-stone-200/40">
         <div className="max-w-5xl mx-auto">
-          {/* Side-by-side grid of native download cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 justify-center justify-items-center items-stretch">
+          {/* Side-by-side grid of raw embed cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center justify-items-center items-start">
             
-            {/* Card 1: Plan Template */}
-            <div className="w-full max-w-[390px] rounded-3xl overflow-hidden border border-stone-200/80 shadow-md hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between">
-              {/* Banner Area */}
-              <div className="relative h-[210px] bg-gradient-to-br from-stone-100 via-stone-50 to-[#f5f4ee]/70 p-6 flex flex-col justify-between border-b border-stone-200/50 overflow-hidden shrink-0 select-none">
-                {/* Decorative SVG Illustration of Papers and Family */}
-                <div className="absolute right-[-10px] bottom-[-15px] w-[180px] h-[180px] opacity-85 pointer-events-none">
-                  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                    {/* Shadow Layer */}
-                    <path d="M 45 75 L 175 45 L 195 145 L 65 175 Z" fill="#000000" opacity="0.03" />
-                    {/* Paper 1 */}
-                    <path d="M 40 70 L 170 40 L 190 140 L 60 170 Z" fill="#ffffff" stroke="#e3e1d9" strokeWidth="1.2" />
-                    {/* Paper 2 (Offset top) */}
-                    <path d="M 48 62 L 178 32 L 198 132 L 68 162 Z" fill="#fcfbf7" stroke="#e2dfd5" strokeWidth="1.2" />
-                    
-                    {/* Line Sketch of Family */}
-                    {/* Parent 1 */}
-                    <path d="M 95 90 C 95 85, 103 85, 103 90 C 103 95, 95 95, 95 90 Z" fill="#1a1a1b" opacity="0.1" />
-                    <circle cx="99" cy="85" r="5" stroke="#44403c" strokeWidth="1.2" />
-                    <path d="M 99 90 L 99 110 M 99 94 L 91 100 M 99 94 L 107 100 M 99 110 L 94 125 M 99 110 L 104 125" stroke="#44403c" strokeWidth="1.2" strokeLinecap="round" />
-                    
-                    {/* Parent 2 */}
-                    <circle cx="115" cy="88" r="4.5" stroke="#44403c" strokeWidth="1.2" />
-                    <path d="M 115 92.5 L 115 109 M 115 96 L 108 101 M 115 96 L 122 101 M 115 109 L 111 123 M 115 109 L 119 123" stroke="#44403c" strokeWidth="1.2" strokeLinecap="round" />
-                    
-                    {/* Kid 1 */}
-                    <circle cx="85" cy="103" r="3.5" stroke="#44403c" strokeWidth="1.2" />
-                    <path d="M 85 106.5 L 85 118 M 85 109 L 79 113 M 85 109 L 91 113 M 85 118 L 82 127 M 85 118 L 88 127" stroke="#44403c" strokeWidth="1.2" strokeLinecap="round" />
-
-                    {/* Kid 2 */}
-                    <circle cx="127" cy="105" r="3" stroke="#44403c" strokeWidth="1.2" />
-                    <path d="M 127 108 L 127 117 M 127 110 L 122 114 M 127 110 L 132 114 M 127 117 L 125 125 M 127 117 L 129 125" stroke="#44403c" strokeWidth="1.2" strokeLinecap="round" />
-
-                    {/* Ground/Shadow Line */}
-                    <path d="M 65 132 C 100 128, 140 128, 175 132" stroke="#d6d3d1" strokeWidth="1" strokeDasharray="3 3" />
-                  </svg>
-                </div>
-
-                {/* Top-right Admin Badge */}
-                <span className="absolute top-4 right-4 text-[9px] font-bold tracking-widest text-stone-400 uppercase">ADMIN</span>
-
-                {/* BiggerPockets MONEY Logo */}
-                <div className="flex flex-col items-start">
-                  <span className="text-[9px] tracking-widest font-sans font-extrabold text-stone-400 uppercase leading-none">BiggerPockets®</span>
-                  <span className="text-lg font-black tracking-tight text-[#2c6e91] leading-none mt-0.5">MONEY</span>
-                </div>
-
-                {/* Title */}
-                <div className="mt-2 max-w-[210px] z-10">
-                  <h3 className="font-serif text-2xl font-black text-stone-900 leading-none">"DEWK"</h3>
-                  <p className="text-[10px] sm:text-[11px] font-bold text-stone-600 uppercase tracking-wide leading-tight mt-1.5">
-                    (Dually Employed With Kids) Financial Plan Template
-                  </p>
-                </div>
-
-                {/* Dynamic Download pill */}
-                <div className="z-10 bg-white/90 backdrop-blur-xs border border-stone-200/60 px-3 py-1 rounded-full flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-stone-600 shadow-xs self-start mt-3">
-                  <Download className="w-3.5 h-3.5 text-stone-500 shrink-0" />
-                  <span>1,913 Downloads</span>
-                </div>
-              </div>
-
-              {/* Card Content Area */}
-              <div className="p-6 sm:p-7 flex flex-col justify-between flex-grow">
-                <div>
-                  {/* Category Pill and Date */}
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-[10px] font-extrabold px-3 py-1 rounded-full tracking-wider uppercase">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                      Document
-                    </span>
-                    <span className="text-[11px] text-stone-500 font-semibold font-sans">Updated Jul 7, 2026</span>
-                  </div>
-
-                  {/* Document Title */}
-                  <h4 className="font-serif text-lg sm:text-xl font-bold text-stone-900 leading-snug mb-3">
-                    "DEWK" (Dually Employed With Kids) Financial Plan Template
-                  </h4>
-
-                  {/* Description */}
-                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4 font-sans">
-                    A detailed, illustrative financial plan and template specifically crafted for households in the "Middle Class Trap" with kids and dual incomes, who are trying to build liquid wealth and escape illiquidity.
-                  </p>
-
-                  {/* Read More Anchor */}
-                  <a 
-                    href="#how-to-use" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById("dewk-toolkit")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="text-emerald-700 hover:text-emerald-800 font-bold text-xs transition-colors inline-block mb-6 cursor-pointer"
-                  >
-                    Read more
-                  </a>
-                </div>
-
-                <div>
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-stone-100 mb-5">
-                    <span className="text-[9px] font-bold tracking-wide uppercase bg-[#f4f6f0] text-emerald-800 px-2.5 py-1 rounded-md">Financial Plan Templates</span>
-                    <span className="text-[9px] font-bold tracking-wide uppercase bg-[#f4f6f0] text-emerald-800 px-2.5 py-1 rounded-md">Families</span>
-                    <span className="text-[9px] font-bold tracking-wide uppercase border border-stone-200 text-stone-500 px-2.5 py-1 rounded-md">+2</span>
-                  </div>
-
-                  {/* Download Button */}
-                  <button
-                    onClick={handleCopyLink}
-                    className="w-full bg-[#0a5c36] hover:bg-[#084b2c] text-white font-bold py-3.5 px-6 rounded-xl shadow-xs hover:shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2 text-sm cursor-pointer uppercase tracking-wider"
-                  >
-                    <Download className="w-4 h-4 text-emerald-200 shrink-0" />
-                    Download Template
-                  </button>
-                </div>
-              </div>
+            {/* Embed 1: Plan Template */}
+            <div className="w-full max-w-[380px] mx-auto">
+              <iframe
+                src="https://financial-resources.vercel.app//#/embed/L26iS881ZhPUIqSWTaRc"
+                className="w-full !h-[650px] border-none block"
+                style={{ width: "100%", height: "650px", border: "none", overflow: "hidden", display: "block" }}
+                title="Financial Plan Template: DEWK"
+                scrolling="no"
+              />
             </div>
 
-            {/* Card 2: Projection Model */}
-            <div className="w-full max-w-[390px] rounded-3xl overflow-hidden border border-stone-200/80 shadow-md hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between">
-              {/* Banner Area */}
-              <div className="relative h-[210px] bg-gradient-to-br from-stone-100 via-stone-50 to-[#f5f4ee]/70 p-6 flex flex-col justify-between border-b border-stone-200/50 overflow-hidden shrink-0 select-none">
-                {/* Decorative SVG Illustration of Spreadsheet & Charts */}
-                <div className="absolute right-[-10px] bottom-[-15px] w-[180px] h-[180px] opacity-85 pointer-events-none">
-                  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                    {/* Shadow Layer */}
-                    <path d="M 45 75 L 175 45 L 195 145 L 65 175 Z" fill="#000000" opacity="0.03" />
-                    {/* Spreadsheet Sheet */}
-                    <path d="M 40 70 L 170 40 L 190 140 L 60 170 Z" fill="#ffffff" stroke="#e3e1d9" strokeWidth="1.2" />
-                    
-                    {/* Spreadsheet grid lines */}
-                    <path d="M 68 64 L 173 40 M 72 82 L 177 58 M 76 100 L 181 76 M 80 118 L 185 94 M 84 136 L 189 112" stroke="#f1f0ea" strokeWidth="1" />
-                    <path d="M 90 59 L 110 147 M 120 52 L 140 140 M 150 45 L 170 133" stroke="#f1f0ea" strokeWidth="1" />
-
-                    {/* Chart overlay bar */}
-                    <rect x="75" y="115" width="12" height="35" rx="2" transform="rotate(-13 75 115)" fill="#10b981" opacity="0.15" />
-                    <rect x="100" y="95" width="12" height="55" rx="2" transform="rotate(-13 100 95)" fill="#10b981" opacity="0.25" />
-                    <rect x="125" y="75" width="12" height="75" rx="2" transform="rotate(-13 125 75)" fill="#10b981" opacity="0.35" />
-
-                    {/* Trend Line */}
-                    <path d="M 75 125 L 105 102 L 132 88 L 160 55" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="160" cy="55" r="3.5" fill="#10b981" />
-                    
-                    {/* Ground/Shadow Line */}
-                    <path d="M 65 132 C 100 128, 140 128, 175 132" stroke="#d6d3d1" strokeWidth="1" strokeDasharray="3 3" />
-                  </svg>
-                </div>
-
-                {/* Top-right Admin Badge */}
-                <span className="absolute top-4 right-4 text-[9px] font-bold tracking-widest text-stone-400 uppercase">ADMIN</span>
-
-                {/* BiggerPockets MONEY Logo */}
-                <div className="flex flex-col items-start">
-                  <span className="text-[9px] tracking-widest font-sans font-extrabold text-stone-400 uppercase leading-none">BiggerPockets®</span>
-                  <span className="text-lg font-black tracking-tight text-[#2c6e91] leading-none mt-0.5">MONEY</span>
-                </div>
-
-                {/* Title */}
-                <div className="mt-2 max-w-[210px] z-10">
-                  <h3 className="font-serif text-2xl font-black text-stone-900 leading-none">"DEWK" Model</h3>
-                  <p className="text-[10px] sm:text-[11px] font-bold text-stone-600 uppercase tracking-wide leading-tight mt-1.5">
-                    A Projection Model to Accompany the "DEWK" Plan
-                  </p>
-                </div>
-
-                {/* Dynamic Download pill */}
-                <div className="z-10 bg-white/90 backdrop-blur-xs border border-stone-200/60 px-3 py-1 rounded-full flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-stone-600 shadow-xs self-start mt-3">
-                  <Download className="w-3.5 h-3.5 text-stone-500 shrink-0" />
-                  <span>1,047 Downloads</span>
-                </div>
-              </div>
-
-              {/* Card Content Area */}
-              <div className="p-6 sm:p-7 flex flex-col justify-between flex-grow">
-                <div>
-                  {/* Category Pill and Date */}
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-[10px] font-extrabold px-3 py-1 rounded-full tracking-wider uppercase">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                      Spreadsheet
-                    </span>
-                    <span className="text-[11px] text-stone-500 font-semibold font-sans">Updated Jul 7, 2026</span>
-                  </div>
-
-                  {/* Document Title */}
-                  <h4 className="font-serif text-lg sm:text-xl font-bold text-stone-900 leading-snug mb-3">
-                    Financial Projection Model Spreadsheet: DEWK
-                  </h4>
-
-                  {/* Description */}
-                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4 font-sans">
-                    A robust, fully formulas-driven financial model designed to simulate various scenarios, trade-offs, and projections based on your household spend rates and investment vehicles.
-                  </p>
-
-                  {/* Read More Anchor */}
-                  <a 
-                    href="#how-to-use" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById("dewk-toolkit")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="text-emerald-700 hover:text-emerald-800 font-bold text-xs transition-colors inline-block mb-6 cursor-pointer"
-                  >
-                    Read more
-                  </a>
-                </div>
-
-                <div>
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-stone-100 mb-5">
-                    <span className="text-[9px] font-bold tracking-wide uppercase bg-[#f4f6f0] text-emerald-800 px-2.5 py-1 rounded-md">Spreadsheets</span>
-                    <span className="text-[9px] font-bold tracking-wide uppercase bg-[#f4f6f0] text-emerald-800 px-2.5 py-1 rounded-md">Financial Models</span>
-                    <span className="text-[9px] font-bold tracking-wide uppercase border border-stone-200 text-stone-500 px-2.5 py-1 rounded-md">+1</span>
-                  </div>
-
-                  {/* Download Button */}
-                  <button
-                    onClick={handleDownload}
-                    disabled={downloading}
-                    className="w-full bg-[#0a5c36] hover:bg-[#084b2c] text-white font-bold py-3.5 px-6 rounded-xl shadow-xs hover:shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2 text-sm cursor-pointer uppercase tracking-wider disabled:opacity-80"
-                  >
-                    <Download className={`w-4 h-4 text-emerald-200 shrink-0 ${downloading ? "animate-bounce" : ""}`} />
-                    {downloading ? "Downloading..." : "Download Model"}
-                  </button>
-                </div>
-              </div>
+            {/* Embed 2: Projection Model */}
+            <div className="w-full max-w-[380px] mx-auto">
+              <iframe
+                src="https://financial-resources.vercel.app//#/embed/5xMBrAQfaeg217N05xkn"
+                className="w-full !h-[650px] border-none block"
+                style={{ width: "100%", height: "650px", border: "none", overflow: "hidden", display: "block" }}
+                title="Financial Model Spreadsheet: DEWK"
+                scrolling="no"
+              />
             </div>
 
           </div>
